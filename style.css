@@ -1,0 +1,141 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+body {
+   
+    font-family: Arial, sans-serif;
+    
+   
+    color: #e6eef8;
+    
+    /
+    display: flex;          
+    align-items: center;     
+    justify-content: center; 
+    
+   
+    background:rgb(38, 37, 39);
+    
+    
+    padding: 36px;
+}
+
+
+.page {
+    
+    width: 100%;
+    max-width: 1000px;    
+   
+    text-align: center;
+    
+    
+    background:blue;
+    
+   
+    border-radius: 14px;
+    
+   
+    padding: 28px;
+    
+    
+    border: 1px solid rgb(107, 118, 109);
+    box-shadow: 0 10px 100px green;
+}
+
+.page > h1{
+  margin:0 0 24px;
+  font-size:2rem;
+  letter-spacing:0.6px;
+  color:black;
+}
+
+.sessions{
+  display:grid;
+  gap:24px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+
+.session{
+  padding:24px;
+  border-radius:12px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:140px;
+  position:relative;
+  overflow:hidden;
+  border:1px solid green;
+}
+
+.session:hover{
+  transform:translateY(-8px);
+  box-shadow:0 18px 50px black;
+}
+
+.session h2,.session h3,.session h4{
+  margin:0 0 12px;
+  font-weight:600;
+  font-size:1.25rem;
+}
+
+.session p{
+  margin:0;
+  line-height:1.5;
+  opacity:0.9;
+}
+
+
+.session.asian{
+  background:linear-gradient(135deg, #64ffda 0%, #00b8b8 100%);
+  color:white;
+  box-shadow:0 8px 24px rgba(0,184,184,0.15);
+}
+.session.asian p { color:#004444; }
+
+.session.london{
+  background:linear-gradient(135deg, blue -90%, #4361ee 100%);
+  color:#fff;
+  box-shadow:0 8px 24px rgba(67,97,238,0.18);
+}
+
+.session.newyork{
+  background:linear-gradient(135deg, red -90%, #7209b7 100%);
+  color:#fff;
+  box-shadow:0 8px 24px rgba(247,37,133,0.15);
+}
+
+.session.converted.to.uganda{
+  background:linear-gradient(135deg, orange 0%, #7209b7 100%);
+  color:#fff;
+  box-shadow:0 8px 24px rgba(67,97,238,0.18);
+}
+
+.site-footer{margin-top:18px;color:rgba(230,238,248,0.6);font-size:0.9rem}
+
+@media (max-width:420px){
+  body{padding:16px}
+  .page{padding:16px}
+  .session{padding:14px}
+}
+body { font-family: Arial, sans-serif; margin: 0; }
+.page { background-color: rgb(9, 50, 3); padding: 16px; }
+.session { padding: 12px; margin: 8px 0; border-radius: 4px; color: #111; }
+.session.asian { background-color: rgb(201,206,126); }
+.session.london { background-color: rgb(86,86,255); color: #fff; }
+.session.newyork { background-color: rgb(240,86,86); color: #fff; }
+
+h1 {
+text-align:center;
+   }
+
