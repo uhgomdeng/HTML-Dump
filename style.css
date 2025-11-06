@@ -1,141 +1,56 @@
 
 
-* {
-    box-sizing: border-box;
+:root{
+  --bg:#0f1720; /* page background */
+  --card-bg:#ffffff;
+  --muted:#6c757d;
 }
 
+*{box-sizing:border-box}
 
-html, body {
-    height: 100%;
-    margin: 0;
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+
+body{background:var(--bg);color:#0b0b0b}
+
+/* header/footer spacing handled by Bootstrap, just minor overrides */
+
+.session-card{border:0;border-radius:12px}
+.session-card .card-body{padding:1rem}
+
+.icon-circle{width:48px;height:48px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex:0 0 48px}
+
+/* color variants for icons (kept simple so Bootstrap/bg classes can be used too) */
+.icon-circle.bg-primary{background:#0d6efd}
+.icon-circle.bg-success{background:#198754}
+.icon-circle.bg-danger{background:#dc3545}
+.icon-circle.bg-warning{background:#ffc107}
+
+/* subtle page container style (keeps content readable on dark bg) */
+main .container{max-width:1100px}
+
+/* small responsive tweaks */
+@media (max-width:576px){
+  .icon-circle{width:44px;height:44px}
 }
 
+/* header / nav tweaks */
+header .nav { margin-top: 0.25rem; }
+header .nav-link { color: rgba(255,255,255,0.88); padding: .35rem .75rem; border-radius: .4rem; }
+header .nav-link:hover, header .nav-link:focus { color: #fff; background: rgba(255,255,255,0.04); text-decoration: none; }
+header .nav-link.active { background: rgba(255,255,255,0.06); box-shadow: inset 0 -2px 0 rgba(255,255,255,0.03); }
 
-body {
-   
-    font-family: Arial, sans-serif;
-    
-   
-    color: #e6eef8;
-    
-    /
-    display: flex;          
-    align-items: center;     
-    justify-content: center; 
-    
-   
-    background:rgb(38, 37, 39);
-    
-    
-    padding: 36px;
-}
+/* card subtle hover */
+.session-card { transition: transform .18s ease, box-shadow .18s ease; }
+.session-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(2,6,23,0.35); }
 
+/* IDs for anchor targets */
+#sessions { scroll-margin-top: 110px; }
+#conversions { scroll-margin-top: 110px; }
 
-.page {
-    
-    width: 100%;
-    max-width: 1000px;    
-   
-    text-align: center;
-    
-    
-    background:blue;
-    
-   
-    border-radius: 14px;
-    
-   
-    padding: 28px;
-    
-    
-    border: 1px solid rgb(107, 118, 109);
-    box-shadow: 0 10px 100px green;
-}
+/* keep footer text visible on dark background when using link-secondary */
+footer.bg-light{background:#f8f9fa!important}
 
-.page > h1{
-  margin:0 0 24px;
-  font-size:2rem;
-  letter-spacing:0.6px;
-  color:black;
-}
+/* utility: small muted text used in cards */
+.text-muted.small{color:var(--muted) !important}
 
-.sessions{
-  display:grid;
-  gap:24px;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-}
-
-.session{
-  padding:24px;
-  border-radius:12px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  min-height:140px;
-  position:relative;
-  overflow:hidden;
-  border:1px solid green;
-}
-
-.session:hover{
-  transform:translateY(-8px);
-  box-shadow:0 18px 50px black;
-}
-
-.session h2,.session h3,.session h4{
-  margin:0 0 12px;
-  font-weight:600;
-  font-size:1.25rem;
-}
-
-.session p{
-  margin:0;
-  line-height:1.5;
-  opacity:0.9;
-}
-
-
-.session.asian{
-  background:linear-gradient(135deg, #64ffda 0%, #00b8b8 100%);
-  color:white;
-  box-shadow:0 8px 24px rgba(0,184,184,0.15);
-}
-.session.asian p { color:#004444; }
-
-.session.london{
-  background:linear-gradient(135deg, blue -90%, #4361ee 100%);
-  color:#fff;
-  box-shadow:0 8px 24px rgba(67,97,238,0.18);
-}
-
-.session.newyork{
-  background:linear-gradient(135deg, red -90%, #7209b7 100%);
-  color:#fff;
-  box-shadow:0 8px 24px rgba(247,37,133,0.15);
-}
-
-.session.converted.to.uganda{
-  background:linear-gradient(135deg, orange 0%, #7209b7 100%);
-  color:#fff;
-  box-shadow:0 8px 24px rgba(67,97,238,0.18);
-}
-
-.site-footer{margin-top:18px;color:rgba(230,238,248,0.6);font-size:0.9rem}
-
-@media (max-width:420px){
-  body{padding:16px}
-  .page{padding:16px}
-  .session{padding:14px}
-}
-body { font-family: Arial, sans-serif; margin: 0; }
-.page { background-color: rgb(9, 50, 3); padding: 16px; }
-.session { padding: 12px; margin: 8px 0; border-radius: 4px; color: #111; }
-.session.asian { background-color: rgb(201,206,126); }
-.session.london { background-color: rgb(86,86,255); color: #fff; }
-.session.newyork { background-color: rgb(240,86,86); color: #fff; }
-
-h1 {
-text-align:center;
-   }
 
